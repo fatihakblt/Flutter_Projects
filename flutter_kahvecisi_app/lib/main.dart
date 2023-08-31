@@ -37,57 +37,49 @@ class BenimUyg extends StatelessWidget {
                   color: Colors.white,
                 ),
               ),
-              Container(
+              Container( // Dividerin genişlik parametresi olmadığı için container kullandık.
+                width:200 ,
+                child: Divider( // çizgi çekmek için divider kullanılır.
+                  height:30,
+                  color: Colors.brown[900],
+                ),
+              ),
+              Card(
                 margin: EdgeInsets.symmetric(
                     horizontal: 45.0
                 ),
-                padding: EdgeInsets.all(10.0),
                 color: Colors.brown[900], // Container rengi ayarlandı.
-                child: Row(
-                children: <Widget>[
-                  Icon(
-                    Icons.email,
-                    color: Colors.yellow,
-                  ),
-                  SizedBox( // İcon ile tekxt arası boşluk bırakmak için kullanıldı.
-                    width: 10.0,
-                  ),
-                  Text(
-                    'Sipariş@fkahvecisi.com',
-                    style: TextStyle(
-                        color: Colors.white,
-                      fontSize: 20.0
-                    ),
-                  ),
-                ],
+                child: ListTile(leading:Icon( // Otomatik padding ayarlar.
+                Icons.email,
+                color: Colors.white,
+                ),
+                title:Text(
+                'siparis@fkahvecisi.com',
+                style: TextStyle(
+                    color: Colors.white,
+                ),
+                ),
               ),
               ),
               SizedBox(
                 height: 10,
               ),
-              Container(
+              Card(
                 margin: EdgeInsets.symmetric(
                     horizontal: 45.0
                 ),
-                padding: EdgeInsets.all(10.0),
                 color: Colors.brown[900], // Container rengi ayarlandı.
-                child: Row(
-                  children: <Widget>[
-                    Icon(
-                      Icons.phone,
-                      color: Colors.yellow,
+                child: ListTile(
+                  leading:Icon( // Otomatik padding ayarlar.(leading = icon + yazı şablonu)
+                  Icons.phone,
+                  color: Colors.white,
+                ),
+                  title:Text(
+                    '+90 555 255 25 25',
+                    style: TextStyle(
+                        color: Colors.white,
                     ),
-                    SizedBox( // İcon ile tekxt arası boşluk bırakmak için kullanıldı.
-                      width: 10.0,
-                    ),
-                    Text(
-                      '+90 555 255 25 25',
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20.0
-                      ),
-                    ),
-                  ],
+                  ),
                 ),
               ),
 
@@ -99,5 +91,3 @@ class BenimUyg extends StatelessWidget {
     );
   }
 }
-
-
